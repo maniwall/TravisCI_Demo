@@ -6,4 +6,4 @@ before_install:
   - docker build -t travisci_demo .
  
 scrpit:
-  - docker run travisci_demo maven:3 mvn test -- --coverage
+  - docker run travisci_demo maven:3 mvn test
