@@ -1,5 +1,8 @@
-FROM openjdk:8-jre-alpine
+FROM maven:3.6.1-jdk-8-alpine
+WORKDIR app
 COPY . .
-ARG JAR_FILE=target/*.jar
+RUN mvn test
+RUN mvn install
+ARG JAR_FILE=app/target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

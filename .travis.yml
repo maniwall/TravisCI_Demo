@@ -5,6 +5,3 @@ services:
 
 before_install:
   - docker build -t travisci_demo .
- 
-scrpit:
-  - docker run -e CI=true --entrypoint="" travisci_demo maven:3 mvnw test
