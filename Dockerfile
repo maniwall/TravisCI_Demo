@@ -6,4 +6,4 @@ RUN cd /app/target
 EXPOSE 8080
 # ARG JAR_FILE=app/target/*.jar
 # COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","travisCI_Demo 0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "demo-SNAPSHOT.jar"]
