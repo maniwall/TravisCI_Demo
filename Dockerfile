@@ -3,7 +3,7 @@ WORKDIR '/app'
 COPY . .
 RUN mvn clean package spring-boot:repackage
 # RUN cd /app/target
-EXPOSE 5000
+EXPOSE 80
 # ARG JAR_FILE=app/target/*.jar
 # COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "/app/target/demo-SNAPSHOT.jar"]
